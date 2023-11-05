@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;  
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+
+  --bg-color: #FFFFFF;
+  --font-color: #323238;
+  --buttons-color: #323238;
+  --bg-sound-buttons: #E1E1E6;
+  --bg-sound-buttons-pressed: #02799D;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+
+  background: var(--bg-color);
+  height: 100vh;
+}
+
+#app {
+  width: 82.1rem;
+  height: 33.6rem; 
+
+  display: flex;
+  justify-content: space-between;
+  gap: 19.2rem;
+
+  margin: 19.6rem 22.6rem;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+
+#timer {
+  width: 100%;
+  height: 21.3rem;
+  font-size: 12.6rem;
+  font-weight: 500;
+  text-align: center;
+
+  display: flex;
+  gap: 0;
+}
+
+#timerControls {
+  display: flex;
+  gap: 4rem;
+}
+
+#timerControls button {
+  font-size: 4.8rem;
+  background-color: transparent;
+  border: none;
+  color: var(--font-color);
+}
+
+section {
+  display: grid;
+  grid-template-areas:
+  "a b"
+  "c d";
+  width: 30.8rem;
+  height: 33.6rem;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+section button {
+  font-size: 5rem;
+  background-color: var(--bg-sound-buttons);
+  border: none;
+  border-radius: 2.4rem;
+  padding: 2rem;
+  width: 13.8rem;
+  height: 15.2rem;
+}
+
+.ph-tree {
+  grid-area: a;
+}
+
+.ph-cloud-rain {
+  grid-area: b;
+}
+
+.ph-storefront {
+  grid-area: c;
+}
+
+.ph-flame {
+  grid-area: d;
+}
+
+.pressed {
+  background-color: var(--bg-sound-buttons-pressed);
+  color: var(--bg-color);
+}
